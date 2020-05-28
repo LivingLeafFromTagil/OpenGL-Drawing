@@ -9,13 +9,15 @@
 class Shader
 {
 public:
-	GLuint Program; //èäåíòèôèêàòîð ïðîãðàììû
-	Shader(const GLchar* vertexPath, const GLchar* fragmentPath) { //c÷èòûâàíèå øåéäåðà è åãî ñáîðêà
+	//ÑˆÐµÐ¹Ð´ÐµÑ€Ð½Ð°Ñ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð°
+	GLuint Program;
+	//cÑ‡Ð¸Ñ‚Ñ‹Ð²Ð°Ð½Ð¸Ðµ ÑˆÐµÐ¹Ð´ÐµÑ€Ð¾Ð² Ð¸ Ð¸Ñ… ÑÐ±Ð¾Ñ€ÐºÐ°
+	Shader(const GLchar* vertexPath, const GLchar* fragmentPath) { 
 		std::string vertexCode;
 		std::string fragmentCode;
 		std::ifstream vShaderFile;
 		std::ifstream fShaderFile;
-		//ïðîâåðêà íà âûáðîñ èñêëþ÷åíèé
+		//Ð¿Ñ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð½Ð° Ð²Ñ‹Ð±Ñ€Ð¾Ñ Ð¸ÑÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ð¹
 		vShaderFile.exceptions(std::ifstream::failbit);
 		fShaderFile.exceptions(std::ifstream::failbit);
 		try {
@@ -72,7 +74,8 @@ public:
 		glDeleteShader(fragmentShader);
 	}
 
-	void use() { //èñïîëüçîâàíèå ïðîãðàììû øåéäåðîâ
+	//Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ð½Ð¸Ðµ ÑˆÐµÐ¹Ð´ÐµÑ€Ð½Ð¾Ð¹ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹
+	void use() { 
 		glUseProgram(this->Program);
 	}
 };
