@@ -1,0 +1,2 @@
+C:\Users\Romich\source\repos\OpenGL-Drawing\Debug\OpenGL-Drawing.exe
+C:\Users\Romich\source\repos\OpenGL-Drawing\Debug\OpenGL-Drawing.pdb
